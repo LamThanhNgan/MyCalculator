@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header,body,footer{
+    display: block;
+}
+body, html{
+    height: 100%;
+    background-image: radial-gradient(at center,#b3ecff,#100916);
+    font-family: sans-serif,serif;
+}
+
+#container{
+    min-height: 100%-10em;
+}
+
+#Name{
+    width: auto;
+    font-size: 2.5rem;
+    transition: 0.5s ease-in-out ;
+    padding-top: 30px;
+    margin-bottom: 2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 4px 3px 2px rgb(146, 146, 146);
+    margin-left: 33.5rem;
+}
+#calculator{
+    position: absolute;
+    background-image: radial-gradient(#000a14, #768085 );
+    width: 600px;
+    height: 600x;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px black;
+    margin-left: 28rem;
+    
+}
+#interface{
+    margin: 15px;
+    width: 560px;
+    height: 565px;
+    background-image: linear-gradient(to top right, #000000,#474949);
+    position: relative;
+    border-radius: 15px;
+}
+#screen{
+    position: absolute;
+    background-image: radial-gradient(rgb(189, 189, 189),rgb(196, 196, 196)  );
+    top: 6%;
+    left: 25.2px; 
+    width: 504px;
+    height: 80px;
+    border-radius: 5px;
+    border: #6c7b96 inset 4px;
+}
+
+#screen-top, #screen-bottom{
+    position: absolute;
+    width: 100%;
+}
+#screen-top{
+    height: 30%;
+    background-color: #f5f5f5;
+}
+#screen-bottom{
+    top: 30%;
+    height: calc(70%-5px);
+    border-color: rgb(175, 195, 202);
+    border-top: #dadada solid 5px;
+}
+
+#nums-top, #nums-bottom{
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#nums-top{
+    font-size: 18px;
+    padding: 3px 0 ;
+    color: rgb(50, 78, 105);
+    user-select: none;
+}
+#nums-bottom{
+    font-size: 18px;
+    padding: 3px 0 ;
+    color: rgb(50, 78, 105);
+    user-select: none;
+}
+#keyboard{
+    position: absolute;
+    top: 25%;
+    left: 10px ;
+    width: 544px;
+    height: 400px;
+    background-color: rgb(155, 155, 155);
+    border: #4d4d4d outset 2px;
+    border-radius: 7px;
+}
+/* default-container */
+#default-fuctions-container {
+    position: absolute;
+    width: 530px;
+    height: 17%;
+    margin: 5px;
+    
+}
+/*định vị trí tuyệt đối cho thành phần*/
+
+ #numbers-container {
+    /* vị trí */
+    top: 20%;
+    left: 10px;
+    position: absolute; 
+    
+    /* kích thước */
+    border-radius: 10px;
+    width: 60% ;
+    height: 78% ;
+    /* màu sắc */
+    background-image: linear-gradient(to top right, #3a3e44, #191f27);
+    border: 3px groove rgb(141, 138, 138) ;
+}
+
+#arithmetic-container {
+    /* vị trí */
+    position: absolute;
+    top: 20%;
+    left: calc(60% + 15px);
+    /* kích thước  */
+    width: 36.5%;
+    height: 78%;
+    /* màu sắc */    
+} 
+
+.button {
+    /* Vị trí  */
+    margin: 5px;
+    /* màu sắc  */
+    color: white;
+    /* kích thước  */
+    /* kiểu  */
+    display: flex;
+    font-family: "helvetica", "century gothic", "arial";
+    border-radius: 5px;
+    border: 3px outset rgb(44, 44, 44) ;
+    transition: 0.17s ease-in-out 0.01s; /*hiệu ứng chuyển đổi*/
+    /*căn chỉnh*/
+    float: left;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    
+}
+
+.button:hover {
+    /* lúc chọn vào thì to ra  */
+    transform: scale(1.35);
+}
+
+.button:active{
+    transition: 0.01s ease-in-out 0.01s;
+    transform: scale(1);
+    background-color: #5e5e5e;
+}
+
+#default-fuctions-container .button {
+    font-size: 2.2em;
+    width: 78px;
+    height: 55px;
+    background-color: rgb(43, 44, 44);
+}
+
+#euler, #factorial, #pi {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*K E Y B O A R D*/
+
+.line {
+    margin-left: 15px;
+    margin-top: 7px;
+    clear: both;
+}
+
+#numbers-container .button {
+    background-color: #3e454e;
+    font-size: 2em;
+    width: 85px;
+    height: 65px;
+}
+#numbers-container .button:active{
+    background-color: rgb(197, 199, 199);
+}
+
+
+#numbers-container #clear {
+    font-size: 2rem;
+    background-color: #29292b;
+}
+
+#default-fuctions-container #del,
+#default-fuctions-container #ce {
+    background-color: #000000;
+}
+
+#arithmetic-container .button {
+    background-color: rgb(43, 44, 44);;
+    font-size: 2em;
+    width: 80px;
+    height: 50px;
+}
+
+#arithmetic-container #equalTo {
+    background-color: #000000;
+    width: calc(85px * 2);
+    height: 50px;
+}
+/*
+footer {
+    background-image: linear-gradient(to right, #19171b 20%, #18181a 20%);
+    height: 18rem;
+    width: 99.1vw;
+    overflow: hidden;
+}
+
+#logo-container {
+    float: left;
+    padding: 25px 50px 0 30px;
+}
+
+#logo-container img {
+    width: 265px;
+    height: auto;
+}
+
+.footer-third {
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.footer-third:last-child {
+    margin-right: 0;
+}
+
+.footer-third h1 {
+    font-family: "arial", "sans-serif";
+    font-size: 30px;
+    color: white;
+    display: block;
+    font-weight: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.footer-third a {
+    font-family: "arial", "sans-serif";
+    font-size: 18px;
+    color: #8d8a96;
+    display: table;
+    font-weight: 200;
+    width: fit-content;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease-in-out 0.01s;
+}
+
+.footer-third a:hover {
+    color: white;
+    transform: scale(1.15);
+    text-decoration: underline;
+}
+
+.footer-third li {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.footer-third span {
+    color: white;
+    font-family: "arial", "sans-serif";
+    font-size: 18px;
+    font-weight: 200;
+    display: block;
+    width: 105%;
+}
+
+.footer-third li i {
+    font-size: 65px;
+    padding-right: 15px;
+}
+
+/* --- -Responsive alterations- ---*/
+/*
+@media (max-height: 1040px) {
+    #container {min-height: calc(10vh + 700px);}
+    footer {width: 118.9em;}
+}
+*/
